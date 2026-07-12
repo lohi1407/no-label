@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { products, site } from "@/lib/site";
+import { BrandLogo } from "@/components/BrandLogo";
+import { products } from "@/lib/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -13,10 +14,6 @@ export function SiteHeader() {
   const linkClass = light
     ? "transition-opacity hover:opacity-70 text-soil"
     : "transition-opacity hover:opacity-70 text-white/90";
-
-  const brandClass = light
-    ? "font-display text-xl tracking-tight text-soil sm:text-2xl"
-    : "font-display text-xl tracking-tight text-white drop-shadow-sm sm:text-2xl";
 
   const ctaClass = light
     ? "rounded-sm border border-soil/30 px-4 py-2 text-soil transition hover:bg-field"
@@ -31,9 +28,7 @@ export function SiteHeader() {
       }
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-        <Link href="/" className={brandClass}>
-          {site.name}
-        </Link>
+        <BrandLogo variant={light ? "dark" : "light"} />
 
         <nav className="hidden items-center gap-8 text-sm md:flex">
           <Link href="/#origin" className={linkClass}>
