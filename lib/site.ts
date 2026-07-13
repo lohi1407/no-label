@@ -7,6 +7,19 @@ export const site = {
   /** E.164 without +, used for wa.me links */
   whatsapp: "919493929897",
   phoneDisplay: "+91 94939 29897",
+  origin: {
+    label: "Source location",
+    place: "Nimmala Gudem, Buttayagudem",
+    region: "Eluru, Andhra Pradesh",
+    country: "India",
+    latitude: 17.201377,
+    longitude: 81.251406,
+    mapsUrl: "https://maps.app.goo.gl/j4GPWV5LLV7r6CpR7",
+    mapsEmbedUrl:
+      "https://www.google.com/maps?q=17.201377,81.251406&z=13&output=embed",
+    blurb:
+      "This is where our harvest begins — land we can point to, not a vague claim on a packet.",
+  },
 } as const;
 
 export const products = {

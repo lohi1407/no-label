@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { OriginMap } from "@/components/OriginMap";
 import { Reveal } from "@/components/Reveal";
 import { enquireHref, products, site } from "@/lib/site";
 
@@ -27,9 +28,17 @@ export default function Home() {
               back to the pasture, the paddy, and the hands that know the craft.
               We believe the story of origin is the only label that matters.
             </p>
+            <Link
+              href="/#source"
+              className="mt-8 inline-block text-sm text-leaf underline-offset-4 hover:underline"
+            >
+              See the source on the map →
+            </Link>
           </Reveal>
         </div>
       </section>
+
+      <OriginMap />
 
       <section
         id="harvest"
