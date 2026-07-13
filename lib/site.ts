@@ -5,8 +5,8 @@ export const site = {
     "We source food grown, processed, and prepared in the most organic and natural way — from the land and the people who know it best.",
   email: "hello@nolabel.farm",
   /** E.164 without +, used for wa.me links */
-  whatsapp: "919493929897",
-  phoneDisplay: "+91 94939 29897",
+  whatsapp: "919392939897",
+  phoneDisplay: "+91 93929 39897",
   origin: {
     label: "Source location",
     place: "Reddy Ganapavaram, Buttayagudem",
