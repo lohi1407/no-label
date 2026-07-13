@@ -19,6 +19,9 @@ export const products = {
     blurb:
       "Bilona-style ghee from A2 milk — made from curd, not milk poured straight into the pan.",
     enquireLabel: "Pure Organic A2 Cow Ghee",
+    priceInr: 3000,
+    priceUnit: "per kg",
+    priceLabel: "₹3,000 / kg",
     images: {
       product: "/images/ghee-product.png",
       source: "/images/ghee-source.png",
@@ -34,6 +37,9 @@ export const products = {
     blurb:
       "Traditionally grown without pesticides — a seed known for its naturally low glycemic index.",
     enquireLabel: "Telangana Samba Rice",
+    priceInr: 2000,
+    priceUnit: "per 25 kg bag",
+    priceLabel: "₹2,000 / 25 kg bag",
     images: {
       product: "/images/rice-product.png",
       field: "/images/rice-field.png",

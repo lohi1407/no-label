@@ -10,13 +10,25 @@ import {
 } from "@/lib/site";
 
 const productOptions: { value: ProductId; label: string }[] = [
-  { value: "ghee", label: products.ghee.enquireLabel },
-  { value: "rice", label: products.rice.enquireLabel },
+  {
+    value: "ghee",
+    label: `${products.ghee.enquireLabel} (${products.ghee.priceLabel})`,
+  },
+  {
+    value: "rice",
+    label: `${products.rice.enquireLabel} (${products.rice.priceLabel})`,
+  },
   { value: "both", label: "Both products" },
 ];
 
 function productLabel(id: ProductId) {
   return productOptions.find((o) => o.value === id)?.label ?? id;
+}
+
+function productPriceLine(id: ProductId) {
+  if (id === "ghee") return products.ghee.priceLabel;
+  if (id === "rice") return products.rice.priceLabel;
+  return `${products.ghee.priceLabel}; ${products.rice.priceLabel}`;
 }
 
 export function EnquireForm() {
@@ -41,6 +53,7 @@ export function EnquireForm() {
       `Name: ${name}`,
       `Phone / Email: ${contact}`,
       `Product: ${productLabel(product)}`,
+      `Listed price: ${productPriceLine(product)}`,
       quantity ? `Quantity / note: ${quantity}` : null,
       message ? `Message: ${message}` : null,
     ]

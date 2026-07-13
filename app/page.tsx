@@ -63,6 +63,9 @@ export default function Home() {
                 <h3 className="font-display mt-5 text-2xl text-soil transition group-hover:text-leaf">
                   {products.ghee.name}
                 </h3>
+                <p className="mt-2 font-display text-lg text-leaf">
+                  {products.ghee.priceLabel}
+                </p>
                 <p className="mt-2 max-w-md text-soil/70">{products.ghee.blurb}</p>
                 <span className="mt-4 inline-block text-sm text-leaf underline-offset-4 group-hover:underline">
                   Discover the source →
@@ -87,6 +90,9 @@ export default function Home() {
                 <h3 className="font-display mt-5 text-2xl text-soil transition group-hover:text-leaf">
                   {products.rice.name}
                 </h3>
+                <p className="mt-2 font-display text-lg text-leaf">
+                  {products.rice.priceLabel}
+                </p>
                 <p className="mt-2 max-w-md text-soil/70">{products.rice.blurb}</p>
                 <span className="mt-4 inline-block text-sm text-leaf underline-offset-4 group-hover:underline">
                   Discover the field →

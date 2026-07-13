@@ -32,6 +32,9 @@ export default function TelanganaSambaRicePage() {
           <h1 className="animate-fade-up animate-delay-1 font-display mt-3 max-w-2xl text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
             {products.rice.name}
           </h1>
+          <p className="animate-fade-up animate-delay-2 mt-4 font-display text-2xl text-straw sm:text-3xl">
+            {products.rice.priceLabel}
+          </p>
           <p className="animate-fade-up animate-delay-2 mt-5 max-w-lg text-lg text-white/85">
             Naturally grown in Telangana — traditional farming, no pesticides,
             and a seed known for its low glycemic index.
