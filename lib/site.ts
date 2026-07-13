@@ -4,9 +4,9 @@ export const site = {
   description:
     "We source food grown, processed, and prepared in the most organic and natural way — from the land and the people who know it best.",
   email: "hello@nolabel.farm",
-  /** E.164 without +, used for wa.me links — replace with your number */
-  whatsapp: "919999999999",
-  phoneDisplay: "+91 99999 99999",
+  /** E.164 without +, used for wa.me links */
+  whatsapp: "919493929897",
+  phoneDisplay: "+91 94939 29897",
 } as const;
 
 export const products = {
