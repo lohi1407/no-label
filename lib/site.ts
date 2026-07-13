@@ -9,7 +9,7 @@ export const site = {
   phoneDisplay: "+91 94939 29897",
   origin: {
     label: "Source location",
-    place: "Nimmala Gudem, Buttayagudem",
+    place: "Reddy Ganapavaram, Buttayagudem",
     region: "Eluru, Andhra Pradesh",
     country: "India",
     latitude: 17.201377,
