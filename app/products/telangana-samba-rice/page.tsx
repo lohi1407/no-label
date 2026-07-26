@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { MakerStory } from "@/components/MakerStory";
 import { Reveal } from "@/components/Reveal";
-import { enquireHref, products } from "@/lib/site";
+import { enquireHref, makers, products } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: products.rice.name,
@@ -27,7 +28,7 @@ export default function TelanganaSambaRicePage() {
         />
         <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 md:justify-center">
           <p className="animate-fade-up text-xs uppercase tracking-[0.25em] text-straw">
-            From the field
+            {products.rice.fromLabel}
           </p>
           <h1 className="animate-fade-up animate-delay-1 font-display mt-3 max-w-2xl text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
             {products.rice.name}
@@ -36,8 +37,8 @@ export default function TelanganaSambaRicePage() {
             {products.rice.priceLabel}
           </p>
           <p className="animate-fade-up animate-delay-2 mt-5 max-w-lg text-lg text-white/85">
-            Naturally grown in Telangana — traditional farming, no pesticides,
-            and a seed known for its low glycemic index.
+            Naturally grown on Veerraju’s farm — traditional farming, no
+            pesticides, and a seed known for its low glycemic index.
           </p>
           <Link
             href={enquireHref("rice")}
@@ -48,13 +49,15 @@ export default function TelanganaSambaRicePage() {
         </div>
       </section>
 
+      <MakerStory makerId="veerraju" reverse />
+
       <section className="bg-atmosphere px-5 py-20 sm:px-8 sm:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16 md:items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
               <Image
                 src={products.rice.images.field}
-                alt="Traditional Telangana paddy fields"
+                alt="Traditional Telangana paddy fields on Veerraju’s farm"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -66,19 +69,20 @@ export default function TelanganaSambaRicePage() {
               Grown naturally
             </p>
             <h2 className="font-display mt-3 text-3xl text-soil sm:text-4xl">
-              Traditional farming in Telangana — without pesticides
+              Natural farming — years in the making
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-soil/75">
               <p>
-                Telangana Samba is cultivated the way rice was meant to be grown:
-                with attention to the season, the soil, and the seed — not with
-                a spray schedule.
+                On Veerraju’s farm, Telangana Samba is cultivated the way rice
+                was meant to be grown: with attention to the season, the soil,
+                and the seed — not with a spray schedule.
               </p>
               <p>
                 Fields are managed through traditional practices: natural
-                fertilisers, careful water use, and no chemical pesticides. The
-                grain that reaches you carries the character of that land —
-                clean, whole, and true to place.
+                fertilisers, careful water use, and no chemical pesticides. What
+                began as clean eating for his own household now feeds a wider
+                circle that trusts his values — grain that carries the character
+                of land he can explain, field by field.
               </p>
             </div>
           </Reveal>
@@ -119,10 +123,11 @@ export default function TelanganaSambaRicePage() {
         </div>
       </section>
 
-      <section className="bg-leaf-deep px-5 py-16 text-center text-mist sm:px-8">
-        <Reveal>
+      <section className="relative overflow-hidden bg-leaf-deep px-5 py-16 text-center text-mist sm:px-8">
+        <div className="pointer-events-none absolute inset-0 grain opacity-40" aria-hidden />
+        <Reveal className="relative">
           <p className="font-display text-2xl sm:text-3xl">
-            Bring the field to your kitchen.
+            Bring {makers.veerraju.name}’s field to your kitchen.
           </p>
           <Link
             href={enquireHref("rice")}

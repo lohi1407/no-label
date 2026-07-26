@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --soil: #2c2416;
-  --leaf: #3d5c45;
-  --leaf-deep: #2a4030;
+  --soil: #2a2114;
+  --leaf: #3a5640;
+  --leaf-deep: #253628;
   --straw: #c4a574;
-  --clay: #a8896e;
-  --field: #e8efe4;
-  --mist: #f2f5ef;
-  --ink: #1f1a14;
+  --clay: #9a7558;
+  --field: #e2e8dc;
+  --mist: #eef1e8;
+  --earth: #d9cfc0;
+  --ink: #1c1710;
   --cream-avoid: transparent;
   --background: var(--mist);
   --foreground: var(--ink);
@@ -24,6 +25,7 @@
   --color-clay: var(--clay);
   --color-field: var(--field);
   --color-mist: var(--mist);
+  --color-earth: var(--earth);
   --color-ink: var(--ink);
   --font-sans: var(--font-figtree);
   --font-display: var(--font-fraunces);
@@ -51,9 +53,17 @@ body {
 /* Soft field atmosphere — green-tinted, not flat cream */
 .bg-atmosphere {
   background:
-    radial-gradient(ellipse 120% 80% at 10% 0%, #d4e2d0 0%, transparent 55%),
-    radial-gradient(ellipse 90% 70% at 90% 20%, #e6ddd0 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 10% 0%, #cfdcc8 0%, transparent 55%),
+    radial-gradient(ellipse 90% 70% at 90% 20%, #ddd2c2 0%, transparent 50%),
     linear-gradient(180deg, var(--mist) 0%, var(--field) 100%);
+}
+
+/* Earthen linen wash — warmer rustic panels without cream cliché */
+.bg-earth-linen {
+  background:
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(154, 117, 88, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(61, 92, 69, 0.1) 0%, transparent 50%),
+    linear-gradient(165deg, #ebe6db 0%, #e4ddd0 42%, #dfe6d8 100%);
 }
 
 .bg-hero-field {
@@ -94,9 +104,32 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.12;
+  opacity: 0.14;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Fine woven linen — subtle rustic texture for panels */
+.grain {
+  isolation: isolate;
+}
+
+.bg-earth-linen.grain::before,
+.bg-earth-linen .grain::before {
+  opacity: 0.18;
+}
+
+@keyframes soft-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.animate-soft-drift {
+  animation: soft-drift 5.5s ease-in-out infinite alternate;
 }
 
 @keyframes fade-up {

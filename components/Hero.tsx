@@ -14,7 +14,7 @@ export function Hero() {
         className="object-cover object-center"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-soil/80 via-leaf-deep/55 to-soil/30"
+        className="absolute inset-0 bg-gradient-to-r from-soil/82 via-leaf-deep/58 to-soil/32"
         aria-hidden
       />
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 sm:pb-20 md:justify-center md:pb-24">
@@ -22,7 +22,8 @@ export function Hero() {
           {site.name}
         </p>
         <p className="animate-fade-up animate-delay-1 mt-5 max-w-md text-lg leading-relaxed text-white/85 sm:text-xl">
-          Food sourced from its origins — grown and prepared the natural way.
+          From Lakshmi’s kitchen and Veerraju’s farm — food grown and prepared
+          the natural way, with a name behind every harvest.
         </p>
         <div className="animate-fade-up animate-delay-2 mt-10 flex flex-wrap gap-4">
           <Link
@@ -32,10 +33,10 @@ export function Hero() {
             Shop the harvest
           </Link>
           <Link
-            href="#origin"
+            href="#people"
             className="rounded-sm border border-white/45 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
           >
-            Our story
+            Meet the makers
           </Link>
         </div>
       </div>

@@ -20,7 +20,8 @@ export function OriginMap() {
               A place on the map — not just a story.
             </h2>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-soil/75">
-              {origin.blurb}
+              {origin.blurb} Here Lakshmi tends her kitchen craft, and Veerraju
+              keeps his paddy the natural way.
             </p>
 
             <dl className="mt-10 space-y-5">

@@ -34,6 +34,9 @@ export function SiteHeader() {
           <Link href="/#origin" className={linkClass}>
             Origin
           </Link>
+          <Link href="/#people" className={linkClass}>
+            People
+          </Link>
           <Link href="/#source" className={linkClass}>
             Source
           </Link>
@@ -99,6 +102,9 @@ export function SiteHeader() {
           <nav className="flex flex-col gap-4 text-base">
             <Link href="/#origin" onClick={() => setOpen(false)}>
               Origin
+            </Link>
+            <Link href="/#people" onClick={() => setOpen(false)}>
+              People
             </Link>
             <Link href="/#source" onClick={() => setOpen(false)}>
               Source

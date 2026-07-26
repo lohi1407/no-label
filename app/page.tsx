@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { OriginMap } from "@/components/OriginMap";
+import { PeopleOfOrigin } from "@/components/PeopleOfOrigin";
 import { Reveal } from "@/components/Reveal";
 import { enquireHref, products, site } from "@/lib/site";
 
@@ -20,23 +21,26 @@ export default function Home() {
               From the origin
             </p>
             <h2 className="font-display mt-4 text-3xl leading-tight text-soil sm:text-4xl md:text-5xl">
-              No empty labels. Just where the food comes from.
+              No empty labels. Just where the food comes from — and who made it.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-soil/75">
               {site.name} exists to bring you food that has been grown,
               processed, or prepared in the most organic and natural way — traced
-              back to the pasture, the paddy, and the hands that know the craft.
-              We believe the story of origin is the only label that matters.
+              back to Lakshmi’s kitchen, Veerraju’s paddy, and the land that
+              feeds both. We believe the story of origin is the only label that
+              matters.
             </p>
             <Link
-              href="/#source"
+              href="/#people"
               className="mt-8 inline-block text-sm text-leaf underline-offset-4 hover:underline"
             >
-              See the source on the map →
+              Meet the people behind the harvest →
             </Link>
           </Reveal>
         </div>
       </section>
+
+      <PeopleOfOrigin />
 
       <OriginMap />
 
@@ -69,7 +73,10 @@ export default function Home() {
                     className="product-link-image object-cover"
                   />
                 </div>
-                <h3 className="font-display mt-5 text-2xl text-soil transition group-hover:text-leaf">
+                <p className="mt-5 text-xs uppercase tracking-[0.22em] text-leaf">
+                  {products.ghee.fromLabel}
+                </p>
+                <h3 className="font-display mt-2 text-2xl text-soil transition group-hover:text-leaf">
                   {products.ghee.name}
                 </h3>
                 <p className="mt-2 font-display text-lg text-leaf">
@@ -96,7 +103,10 @@ export default function Home() {
                     className="product-link-image object-cover"
                   />
                 </div>
-                <h3 className="font-display mt-5 text-2xl text-soil transition group-hover:text-leaf">
+                <p className="mt-5 text-xs uppercase tracking-[0.22em] text-leaf">
+                  {products.rice.fromLabel}
+                </p>
+                <h3 className="font-display mt-2 text-2xl text-soil transition group-hover:text-leaf">
                   {products.rice.name}
                 </h3>
                 <p className="mt-2 font-display text-lg text-leaf">
@@ -112,8 +122,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-leaf-deep px-5 py-20 text-mist sm:px-8 sm:py-24">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden bg-leaf-deep px-5 py-20 text-mist sm:px-8 sm:py-24">
+        <div className="pointer-events-none absolute inset-0 grain opacity-40" aria-hidden />
+        <div className="relative mx-auto max-w-3xl text-center">
           <Reveal>
             <h2 className="font-display text-3xl sm:text-4xl">
               Ready to bring origin home?

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { MakerStory } from "@/components/MakerStory";
 import { Reveal } from "@/components/Reveal";
-import { enquireHref, products } from "@/lib/site";
+import { enquireHref, makers, products } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: products.ghee.name,
@@ -27,7 +28,7 @@ export default function A2CowGheePage() {
         />
         <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 md:justify-center">
           <p className="animate-fade-up text-xs uppercase tracking-[0.25em] text-straw">
-            From the pasture
+            {products.ghee.fromLabel}
           </p>
           <h1 className="animate-fade-up animate-delay-1 font-display mt-3 max-w-2xl text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
             {products.ghee.name}
@@ -36,8 +37,8 @@ export default function A2CowGheePage() {
             {products.ghee.priceLabel}
           </p>
           <p className="animate-fade-up animate-delay-2 mt-5 max-w-lg text-lg text-white/85">
-            Slow-made ghee from A2 cow milk — prepared the traditional way,
-            beginning with curd.
+            Slow-made ghee from A2 cow milk — prepared in Lakshmi’s kitchen the
+            traditional way, beginning with curd, offered with devotion.
           </p>
           <Link
             href={enquireHref("ghee")}
@@ -47,6 +48,8 @@ export default function A2CowGheePage() {
           </Link>
         </div>
       </section>
+
+      <MakerStory makerId="lakshmi" />
 
       <section className="bg-atmosphere px-5 py-20 sm:px-8 sm:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16 md:items-center">
@@ -63,23 +66,23 @@ export default function A2CowGheePage() {
           </Reveal>
           <Reveal>
             <p className="text-xs uppercase tracking-[0.25em] text-leaf">
-              The source
+              Her cattle
             </p>
             <h2 className="font-display mt-3 text-3xl text-soil sm:text-4xl">
-              How the cows are fed, and where the milk begins
+              Cows she knows — milk she trusts
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-soil/75">
               <p>
-                Our A2 ghee starts with cows raised on natural fodder — green
-                pasture, dry fodder, and feed free from industrial additives.
-                Their milk carries the A2 beta-casein protein, valued for its
-                gentler, traditional character.
+                Lakshmi’s love for cattle runs through every jar. The cows are
+                companions of her rural household: tended with patience, fed on
+                natural fodder — green pasture, dry fodder, and feed free from
+                industrial additives — and never treated as a distant resource.
               </p>
               <p>
-                Milk is collected from farms that follow organic practices:
-                open grazing where possible, clean sheds, and no routine
-                chemical shortcuts. What goes into the cow shapes what ends up
-                in the jar — so we begin at the source, not at the shelf.
+                Their milk carries the A2 beta-casein protein, valued for its
+                gentler, traditional character. What goes into the cow shapes
+                what ends up in the jar — so she begins at the bond with her
+                animals, not at the shelf.
               </p>
             </div>
           </Reveal>
@@ -104,20 +107,20 @@ export default function A2CowGheePage() {
               The method
             </p>
             <h2 className="font-display mt-3 text-3xl text-soil sm:text-4xl">
-              From curd — not milk poured straight into the pan
+              From curd — clean enough for an offering
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-soil/75">
               <p>
                 Most commercial ghee is made by heating cream or milk fat
-                directly. Ours follows the older path: fresh milk is set into
-                curd, then churned to separate butter — a bilona-style process
-                that takes time and care.
+                directly. In Lakshmi’s kitchen the older path holds: fresh milk
+                is set into curd, then churned to separate butter — a
+                bilona-style process that takes time and care.
               </p>
               <p>
                 That butter is gently clarified over a slow fire until the water
                 leaves and the milk solids settle, leaving pure ghee with a deep
-                aroma and golden clarity. Curd first, then churn, then clarify —
-                the long way, on purpose.
+                aroma and golden clarity. For her, authenticity and cleanliness
+                are not marketing words — they are how an offering is made.
               </p>
             </div>
             <ol className="mt-8 space-y-3 text-sm text-soil/80">
@@ -138,10 +141,11 @@ export default function A2CowGheePage() {
         </div>
       </section>
 
-      <section className="bg-leaf-deep px-5 py-16 text-center text-mist sm:px-8">
-        <Reveal>
+      <section className="relative overflow-hidden bg-leaf-deep px-5 py-16 text-center text-mist sm:px-8">
+        <div className="pointer-events-none absolute inset-0 grain opacity-40" aria-hidden />
+        <Reveal className="relative">
           <p className="font-display text-2xl sm:text-3xl">
-            Taste the difference origin makes.
+            Taste the difference {makers.lakshmi.name}’s kitchen makes.
           </p>
           <Link
             href={enquireHref("ghee")}

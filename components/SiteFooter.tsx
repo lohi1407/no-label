@@ -14,8 +14,8 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-mist/75">
-            {site.tagline} Grown, prepared, and brought to you without the noise —
-            just the origin.
+            {site.tagline} From Lakshmi’s kitchen and Veerraju’s farm — grown,
+            prepared, and brought to you without the noise.
           </p>
         </div>
 
